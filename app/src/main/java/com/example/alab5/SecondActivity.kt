@@ -13,5 +13,12 @@ class SecondActivity : AppCompatActivity(){
         enableEdgeToEdge()
         setContentView(R.layout.second_activity)
 
+        textView = findViewById(R.id.textView)
+
+        var price = intent.getIntExtra("Price_one_list", 0)
+        var count = intent.getIntExtra("List_count", 0)
+
+        var endPrice = price * count
+        textView.text = "Цена печати = ${endPrice} рублей"
     }
 }
